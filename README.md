@@ -1,4 +1,3 @@
-# DME
 # Dynamic Multimodal Evaluation(DME)
 
 <p align="left">
@@ -25,7 +24,7 @@ This repository is the official implementation of [DME](https://arxiv.org/abs/24
 LVLMs have demonstrated good performance on various multimodal evaluation benchmarks. However, these benchmarks keep a static nature and overlap with the pre-training data, resulting in fixed complexity constraints and data contamination issues. This raises the concern regarding the validity of the evaluation. 
 
 To address these two challenges, we introduce a dynamic multimodal evaluation protocol called Vision-Language Bootstrapping (VLB). VLB provides a robust and comprehensive assessment for LVLMs with reduced data contamination and flexible complexity. To this end, VLB dynamically generates new visual question-answering samples through a multimodal bootstrapping module that modifies both images and language, while ensuring that newly generated samples remain consistent with the original ones by a judge module. By composing various bootstrapping strategies, VLB offers dynamic variants of existing benchmarks with diverse complexities, enabling the evaluation to co-evolve with the ever-evolving capabilities of LVLMs. 
-![overview]()
+![overview](figures/fig-1-intro-final.jpg)
 
 
 
@@ -37,7 +36,7 @@ We explore two types of data contamination in multimodal evaluation benchmarks.
 
 **2) Image-text contamination.** Beyond images, the question and answer of the benchmark can also be contaminated. For contaminated image pairs, we determine the question and answer are contaminated if the answer can be directly inferred from the captions of the training image. 
 
-![Data Contamination Rate]()
+![Data Contamination Rate](figures/data_compress.jpg)
 
 We examine the two types of data contamination across three popular evaluation benchmarks: SEEDBench, MMBench, MME, and three widely used pre-training datasets: LAION-100M, CC3M, and COCO-Caption. The results reveal that each evaluation benchmark exhibits certain contamination rates across training datasets of various sizes.
 
@@ -57,7 +56,7 @@ We examine the two types of data contamination across three popular evaluation b
 
   
 
-![Framework]()
+![Framework](figures/fig-2-method-final-user-action.jpg)
 
 
 
@@ -87,12 +86,4 @@ If you feel DME instructive for your research, please kindly use the following B
   year={2024}
 }
 ```
-
-
-  author={Yang, Yue and Zhang, Shuibai and Shao, Wenqi and Zhang, Kaipeng and Bin, Yi and Wang, Yu and Luo, Ping},
-  journal={arXiv preprint arXiv:2410.08695},
-  year={2024}
-}
-```
-
 
