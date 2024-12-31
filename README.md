@@ -16,7 +16,7 @@ This repository is the official implementation of [DME](https://arxiv.org/abs/24
 ## 💡 News
 
 
-- `2024/06/17`: Opencompass [VLMEevalKit](https://github.com/open-compass/VLMEvalKit)  release supports some DME datas now!  You can use [VLMEevalKit](https://github.com/open-compass/VLMEvalKit) to try and visualize our dynamic datas.
+- `2024/12/31`: Opencompass [VLMEevalKit](https://github.com/open-compass/VLMEvalKit)  release supports some DME datas now!  You can use [VLMEevalKit](https://github.com/open-compass/VLMEvalKit) to try and visualize our dynamic datas.
 
 
 
@@ -61,6 +61,12 @@ We examine the two types of data contamination across three popular evaluation b
 
 
 
+## Released Demo Datas
+
+Based on LlavaBench and MMvet, we have curated two more challenging versions of the datasets: LlavaBench_hard and MMvet_hard. These are the hardest multimodal combinations **(V1+L4)** in our dynamic strategy. Thanks to the support from Opencompass [VLMEevalKit](https://github.com/open-compass/VLMEvalKit) , we have also integrated these datasets onto [VLMEevalKit](https://github.com/open-compass/VLMEvalKit)  for reference, usage, and visualization.
+
+
+
 ## 💐 Acknowledgement
 
 We expressed sincerely gratitude for the projects listed following:
@@ -76,6 +82,13 @@ If you feel DME instructive for your research, please kindly use the following B
 ```
 @article{yang2024dynamic,
   title={Dynamic Multimodal Evaluation with Flexible Complexity by Vision-Language Bootstrapping},
+  author={Yang, Yue and Zhang, Shuibai and Shao, Wenqi and Zhang, Kaipeng and Bin, Yi and Wang, Yu and Luo, Ping},
+  journal={arXiv preprint arXiv:2410.08695},
+  year={2024}
+}
+```
+
+
   author={Yang, Yue and Zhang, Shuibai and Shao, Wenqi and Zhang, Kaipeng and Bin, Yi and Wang, Yu and Luo, Ping},
   journal={arXiv preprint arXiv:2410.08695},
   year={2024}
