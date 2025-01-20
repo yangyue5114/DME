@@ -13,8 +13,6 @@ import os
 import json
 import random
 from math import ceil
-# os.environ["OPENAI_API_KEY"] = "sk-qga2TYt7ynKFEUdI1e9f3aF9590f400aA6F5752b92DbE3E3"
-# os.environ["OPENAI_BASE_URL"] = "https://api.openai-sb.com/v1"
 
 
 def timestr(second=True):
@@ -31,11 +29,6 @@ def get_shape(image_path):
     width, height = img.size
     return [width, height]
 
-#自己的
-# client = OpenAI(
-#     base_url='https://api.openai-sb.com/v1',
-#     api_key='sb-cbb2f7f135c277eb4e1fb5840a97154e197a394570c666e7',
-# )
 
 client = OpenAI(
     base_url='https://api.openai.com/v1',
@@ -118,22 +111,16 @@ def main(img_dicts, writer):
 
 #MM
 #keys:['attribute_comparison', 'image_style', 'social_relation', 'action_recognition', 'structuralized_imagetext_understanding', 'identity_reasoning', 'future_prediction', 'spatial_relationship', 'object_localization', 'function_reasoning', 'image_scene', 'physical_relation', 'image_topic', 'image_emotion', 'ocr', 'attribute_recognition', 'nature_relation', 'physical_property_reasoning', 'image_quality', 'celebrity_recognition']
-#/mnt/petrelfs/yangyue/dynamic_eval/evaluation/generate_mask/bbox/MM_bench/MM_bench_sample10_for_box.json
 #add: ['attribute_comparison', 'social_relation', 'identity_reasoning', 'future_prediction', 'spatial_relationship', 'object_localization', 'function_reasoning', 'image_scene', 'physical_relation', 'image_emotion', 'ocr', 'attribute_recognition', 'nature_relation','celebrity_recognition']
 
 
-#SEED
-#/mnt/petrelfs/yangyue/dynamic_eval/evaluation/generate_mask/bbox/SEED_Bench/SEED_Bench_sample10_for_box.json        
+#SEED       
 #dict_keys(['Visual_Reasoning', 'Instance_Identity', 'Instance_Interaction', 'Spatial_Relation', 'Scene_Understanding', 'Instance_Attributes', 'Instance_Location', 'Text_Understanding', 'Instances_Counting'])
 #add: ['Visual_Reasoning', 'Instance_Identity', 'Instance_Interaction', 'Spatial_Relation', 'Scene_Understanding', 'Instance_Attributes', 'Instance_Location', 'Text_Understanding', 'Instances_Counting']
 
 #MME
 #["celebrity", "color", "existence", "posters", "commonsense_reasoning", "scene", "position", "count", "landmark", "artwork"]        
 
-
-# 使用，构建数据集
-    # directory = '/mnt/petrelfs/yangyue/evaluation_datasets/SEED_Bench/category_jsons'  # 替换为你的目录路径
-    # list_and_process_json_files(directory)
 
 
 if __name__ == "__main__":
@@ -156,24 +143,7 @@ if __name__ == "__main__":
 
     
 
-    # parser = argparse.ArgumentParser(description='Args.')
-    # # parser.add_argument('--data_path', type=str, default="/mnt/petrelfs/yangyue/dynamic_eval/evaluation/MME_Benchmark_release_data.json", help='root path to the dataset')
-    # # parser.add_argument('--data_items', nargs='+', default=["celebrity", "color", "posters", "commonsense_reasoning", "scene", "position", "count", "landmark"], help='data_items')
-    # parser.add_argument('--save_dir', type=str, default="/mnt/petrelfs/yangyue/dynamic_eval/evaluation/generate_mask/bbox/MM_bench/add", help='save_dir')
-    # args = parser.parse_args()
-    
-    # os.makedirs(args.save_dir, exist_ok=True)
-    # data_json_paths=[]
 
-    # for data_json_path in data_json_paths:
-    #     task_item = data_json_path.split('/')[-1].split('-')[0].replace(".json","")
-    #     write_file_path = os.path.join(args.save_dir, task_item+'.jsonl')
-    #     writer = jsonlines.open(write_file_path, mode='w')
-
-    #     with open(data_json_path, 'r', encoding='utf-8') as file:
-    #         img_dicts = json.load(file)
-        
-    #     main(img_dicts, writer)
 
 
 
